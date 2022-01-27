@@ -82,3 +82,43 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     if($_POST['temp'] === "") { // if temp is empty
         $errorMsg .= '<span class="error">Please fill out a temperature! <br></span>';
     }
+        
+    if(isset(
+        $_POST['unit_1'],
+        $_POST['unit_2'],
+        $_POST['temp']
+    )) {
+        $unit_1 = $_POST['unit_1'];
+        $unit_2 = $_POST['unit_2'];
+        $converted_temp = 0; 
+        $temp = intval($_POST['temp']); 
+
+    if($unit_1 === $unit_2) { // if both are the same conversion
+        $errorMsg .= '<span class="error">Please Select Two Different Units!<br></span>';
+    }
+        
+    if($unit_1 == 'Fahrenheit' && $unit_2 == 'Celsius') { // Fahrenheit to Celsius	° C = 5/9 (° F - 32)
+        $converted_temp = 5/9 * ($temp - 32);
+    }
+
+    if($unit_1 == 'Celsius' && $unit_2 == 'Fahrenheit') { // Celsius to Fahrenheit	° F = 9/5 ( ° C) + 32
+        $converted_temp = 9/5 * $temp + 32;
+    }
+
+    if($unit_1 == 'Kelvin' && $unit_2 == 'Fahrenheit') { // Kelvin to Fahrenheit	° F = 9/5 (K - 273.15) + 32
+        $converted_temp = 9/5 * ($temp - 273.15) + 32;
+    }
+
+    if($unit_1 == 'Fahrenheit' && $unit_2 == 'Kelvin') { // Fahrenheit to Kelvin	K = 5/9 (° F - 32) + 273.15
+        $converted_temp = 5/9 * ($temp - 32) + 273.15;
+    }
+
+    if($unit_1 == 'Kelvin' && $unit_2 == 'Celsius') { // Kelvin to Celsius	 ° C = K - 273.15
+        $converted_temp = $temp - 273.15;
+    }
+
+    if($unit_1 == 'Celsius' && $unit_2 == 'Kelvin') { // Celsius to Kelvin	 K = ° C + 273.15
+        $converted_temp = $temp + 273.15;
+    } 
+
+} // end of isset if statment
