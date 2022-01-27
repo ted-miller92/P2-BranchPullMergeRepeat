@@ -1,2 +1,2 @@
 # P2-BranchPullMergeRepeat
-GithHub Group Practice!
+GitHub Group Practice!
