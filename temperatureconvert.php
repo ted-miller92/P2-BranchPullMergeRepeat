@@ -59,3 +59,26 @@
 
     </fieldset>
 </form>
+
+    
+<?php
+
+
+if($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $errorMsg = "";
+
+    if(empty($_POST['unit_1']) && empty($_POST['unit_2']) ) { // if both are empty
+        $errorMsg .= '<span class="error">Please select both your units of measurement! <br></span>';
+    }
+
+    if(empty($_POST['unit_1']) && isset($_POST['unit_2'])) { // if unit 1 is null but unit 2 is good
+        $errorMsg .= '<span class="error">Please select your unit of measurement! <br></span>';
+    }
+        
+    if(empty($_POST['unit_2']) && isset($_POST['unit_1'])) { // if unit 2 is null but unit 1 is good
+        $errorMsg .= '<span class="error">What are we converting to? <br></span>';
+    }
+
+    if($_POST['temp'] === "") { // if temp is empty
+        $errorMsg .= '<span class="error">Please fill out a temperature! <br></span>';
+    }
