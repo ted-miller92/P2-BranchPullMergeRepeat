@@ -60,7 +60,7 @@
     </fieldset>
 </form>
 
-    
+
 <?php
 
 
@@ -82,6 +82,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     if($_POST['temp'] === "") { // if temp is empty
         $errorMsg .= '<span class="error">Please fill out a temperature! <br></span>';
     }
+
         
     if(isset(
         $_POST['unit_1'],
@@ -122,3 +123,17 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     } 
 
 } // end of isset if statment
+
+if ($errorMsg === "") {
+    echo '
+    <div class="result">
+        <h2>Converted Temperature</h2>
+        <p>'.$temp.' degrees '.$unit_1.' is equal to '.number_format($converted_temp, 2).' degrees '.$unit_2.'. <br> Have a good day!</p>
+        </div>';
+} else {
+    echo '<div class="result">'.$errorMsg.'</div>';
+    }
+
+} // SERVER REQUEST
+?>
+
