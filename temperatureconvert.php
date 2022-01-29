@@ -137,3 +137,28 @@ if ($errorMsg === "") {
 } // SERVER REQUEST
 ?>
 
+<footer> <!-- START footer section //////// -->
+        <ul>
+            <li
+            >copyright &copy; 
+                <?php
+                    $date_current = date('Y');
+                    $date_created = 2022;
+                    if ($date_current == $date_created) {
+                        echo $date_current;
+                    }
+                    else {
+                        echo ''.$date_created.' - '.$date_current.'';
+                    }
+                ?>
+            </li>
+            <li><a href="https://validator.w3.org/nu/?doc=https://ellencodes.com/it262wn22/homeworks/p1TempConversion/tempconvert.php" target="_blank">HTML Validation</a></li>
+            <li><a href="https://jigsaw.w3.org/css-validator/validator?uri=https://ellencodes.com/it262wn22/homeworks/p1TempConversion/tempconvert.php" target="_blank">CSS Validation</a></li>
+        </ul>
+
+    </footer>
+
+
+</div> <!--CLOSE WRAPPER--->
+</body>
+</html>
