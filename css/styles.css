@@ -9,3 +9,21 @@ body, html {
     background-color: rgb(231, 201, 162);
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
+
+h1 {
+    color:rgb(185, 66, 51);
+    font-family: American Typewritter, serif;
+    font-size: 2.6em;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.fieldset {
+    border: 1.5px solid rgb(63, 61, 61);
+}
+
+form {
+    margin: 20px auto;
+    width: 34%;
+}
