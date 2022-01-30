@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -45,5 +46,11 @@ input {
     font-size:1.3em;
     border:1px solid #eee;
     border-radius:10px;
+}
+
+#submit:hover {
+    background-color:rgb(182, 97, 86);
+    border:1px solid #eee;
+    border-radius:15px;
 }
 
