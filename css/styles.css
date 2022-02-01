@@ -76,3 +76,47 @@ input[type="radio"] {
 #converter input {
   margin: 0 auto;
 }
+
+#temp {
+    margin-left:10px;
+    padding: 5px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li, ul input {
+    padding: 5px;
+    display: inline-block;
+}
+
+.error { /*errror spans*/
+    margin: 10px auto;
+    font-weight: bold;
+    color: red;
+}
+
+.result { /*converted temp div*/
+    margin: 20px auto;
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.result h2 {
+    text-align: center;
+    color:rgb(160, 59, 46);
+    margin-bottom: 10px;
+}
+footer {
+    clear:both;
+    position: fixed;
+    bottom: 100px;
+    left: 40%;
+}
+footer ul {
+    display: flex;
+    justify-content: center;
+}
