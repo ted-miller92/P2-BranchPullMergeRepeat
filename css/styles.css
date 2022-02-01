@@ -1,54 +1,78 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body, html {
-    background-color: rgb(231, 201, 162);
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+body,
+html {
+  background-color: rgb(231, 201, 162);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h1 {
-    color:rgb(185, 66, 51);
-    font-family: American Typewritter, serif;
-    font-size: 2.6em;
-    margin-top: 20px;
-    text-align: center;
-    font-weight: bold;
+  color: rgb(185, 66, 51);
+  font-family: American Typewritter, serif;
+  font-size: 2.6em;
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
 }
 
 .fieldset {
-    border: 1.5px solid rgb(63, 61, 61);
+  border: 1.5px solid rgb(63, 61, 61);
+}
+
+.fieldset ul {
+  list-style-type: none;
 }
 
 form {
-    margin: 20px auto;
-    width: 34%;
+  margin: 20px auto;
+  width: 34%;
 }
 
 label {
-    display: block;
-    font-weight: bold;
-    margin: 10px;
+  display: block;
+  font-weight: bold;
+  margin: 10px;
 }
 
 input {
-    display: block;
-    margin: 3px;
+  display: block;
+  margin: 3px;
 }
 
 #submit {
-    margin: 10px auto;
-    padding: 8px;
-    background-color:rgb(185, 66, 51);
-    font-size:1.3em;
-    border:1px solid #eee;
-    border-radius:10px;
+  margin: 10px auto;
+  padding: 8px;
+  background-color: rgb(185, 66, 51);
+  font-size: 1.3em;
+  border: 1px solid #eee;
+  border-radius: 10px;
 }
 
 #submit:hover {
-    background-color:rgb(182, 97, 86);
-    border:1px solid #eee;
-    border-radius:15px;
+  background-color: rgb(182, 97, 86);
+  border: 1px solid #eee;
+  border-radius: 15px;
+}
+
+input[type="radio"] {
+  display: inline-block;
+  padding: 2px;
+}
+#unit-1 {
+  float: left;
+  margin: 15px;
+}
+#unit-2 {
+  float: right;
+  margin: 15px;
+}
+#converter {
+  text-align: center;
+}
+#converter input {
+  margin: 0 auto;
 }
